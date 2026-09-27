@@ -1,0 +1,45 @@
+<section class="p-5">
+<div class="p-5">
+  <div class="p-5">
+            <h2 class="section-title text-center">Add CVs</h2>
+
+<form class="p-5" #CVForm="ngForm" (ngSubmit)="addCV(CVForm)">
+
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="title"
+      ngModel
+      required
+      placeholder="CV Title">
+  </div>
+
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="description"
+      ngModel
+      required
+      placeholder="Description">
+  </div>
+
+  <div class="mb-3">
+    <input
+      type="text"
+      class="form-control"
+      name="url"
+      ngModel
+      required
+      placeholder="CV Link">
+  </div>
+
+  <button class="btn btn-dark" [disabled]="CVForm.invalid">
+    Add CV
+  </button>
+
+</form>
+  </div>
+</div>
+</section>

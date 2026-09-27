@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Angular FrontEnd/portfolio-frontend/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist/portfolio-frontend" }
+    }
+  ],
+  
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/(.*)", "destination": "/Angular FrontEnd/portfolio-frontend/dist/portfolio-frontend/index.html" }
+  ]
+}
